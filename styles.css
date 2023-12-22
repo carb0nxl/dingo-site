@@ -48,7 +48,7 @@ nav ul {
 nav a {
     text-decoration: none;
     font-family: 'Bebas Neue', sans-serif;
-    font-weight: 700; /* Ensure bold weight */
+    font-weight: 400;
     font-size: 1.5rem;
     color: #fff;
     margin: 0 0.6rem;
@@ -86,15 +86,17 @@ iframe {
 
 .heading-container {
     text-align: center;
-    margin-top: 20px; /* Adjust the margin-top to control the spacing */
+    flex: 1; /* Take up remaining space */
 }
 
 .heading {
     font-family: 'Bebas Neue', sans-serif;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 6.3rem; /* Adjust the size as needed */
     color: #fff; /* Use your desired color */
     margin-bottom: 0.1rem; /* Adjust the margin-bottom to control the spacing */
+    text-align: center;
+    flex: 1; /* Take up remaining space */
 }
 
 .sub-heading {
@@ -104,5 +106,36 @@ iframe {
     background: linear-gradient(to right, #cb59f2, #4b0082); /* Gradient with shades of purple */
     -webkit-background-clip: text;
     color: transparent;
-    margin-top: 0.1rem; /* Adjust the margin-top to control the spacing */
+    margin-top: -2.5rem; /* Adjust the margin-top to control the spacing */
+    text-align: center;
+    flex: 2; /* Take up remaining space */
+}
+
+.levitating-card {
+    background-image: url('images/sitefiles/ace_clubs.png');
+    background-size: cover;
+    width: 150px;
+    height: 200px;
+    position: relative; /* Change from fixed to relative */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: rotate(-25deg);
+    animation: levitate 3s ease-in-out infinite;
+    top: 100px; /* Adjust the top position */
+    right: 20%; /* Adjust the right position */
+}
+
+@keyframes levitate {
+    0%, 100% {
+        top: 150px; /* Initial position */
+    }
+    50% {
+        top: 130px; /* Adjusted levitation height */
+    }
+}
+
+#home {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-around;
+    height: 100vh; /* Use the full height of the viewport */
 }
